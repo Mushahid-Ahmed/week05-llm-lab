@@ -1,0 +1,81 @@
+Model: qwen2.5:7b
+
+Running single-prompt approach...
+Running two-stage chained approach...
+
+======================================================================
+APPROACH A: SINGLE PROMPT
+======================================================================
+1. STATED FACTS
+- The kitchen ceiling is damaged.
+- A pipe burst upstairs.
+- The incident happened yesterday.
+- The claimant has photographs.
+- There is no repair estimate.
+
+2. MISSING EVIDENCE
+- The extent of damage to the ceiling.
+- The cause of the pipe burst (e.g., whether it was due to a known issue or an unforeseen event).
+- The cost of repairs or an estimate of the damage.
+- Any relevant insurance policies or coverage details.
+
+3. CATEGORY
+- property
+
+4. SUMMARY
+The claimant reports that their kitchen ceiling is damaged due to a burst pipe that occurred upstairs. The incident happened yesterday, and the claimant has photographs but no repair estimate. No insurance policies or coverage details are mentioned.
+
+5. LIMITATIONS
+- The extent of the damage to the ceiling is not specified.
+- The cause of the pipe burst is not provided.
+- There is no information on the cost of repairs or an estimate of the damage.
+- The claimant's insurance policies and coverage details are not mentioned, which could be relevant for determining coverage.
+
+Total latency: 59.61s
+
+======================================================================
+APPROACH B: TWO-STAGE CHAIN
+======================================================================
+
+Stage 1 - Extracted information:
+1. STATED FACTS
+- The kitchen ceiling is damaged.
+- A pipe burst upstairs.
+- The incident happened yesterday.
+- The claimant has photographs.
+- The claimant does not have a repair estimate.
+
+2. MISSING EVIDENCE
+- The extent of damage to the ceiling.
+- The cause of the pipe burst (e.g., whether it was due to wear and tear, manufacturing defect, or other factors).
+- Any relevant maintenance history of the pipe or the ceiling.
+- Documentation of the incident, such as a police report or witness statements.
+- Information about the building's age and the materials used in the ceiling and piping.
+
+3. UNCERTAINTIES
+- Whether the damage is covered by the insurance policy.
+- The specific terms and conditions of the insurance policy relevant to this claim.
+
+Stage 2 - Final classification:
+1. CATEGORY
+- property
+
+2. SUMMARY
+The claim involves damage to the kitchen ceiling, which is believed to have been caused by a burst pipe upstairs. The incident occurred yesterday, and the claimant has photographs of the damage but no repair estimate. The cause of the pipe burst and the extent of the ceiling damage are unknown.
+
+3. MISSING EVIDENCE
+- The extent of damage to the ceiling.
+- The cause of the pipe burst (e.g., whether it was due to wear and tear, manufacturing defect, or other factors).
+- Any relevant maintenance history of the pipe or the ceiling.
+- Documentation of the incident, such as a police report or witness statements.
+- Information about the building's age and the materials used in the ceiling and piping.
+
+4. LIMITATIONS
+- Whether the damage is covered by the insurance policy cannot be concluded without additional information about the specific terms and conditions of the policy.
+- The specific terms and conditions of the insurance policy relevant to this claim are unknown, which affects the determination of coverage.
+
+Stage 1 latency: 43.24s
+Stage 2 latency: 56.63s
+Total chain latency: 99.88s
+
+Saved report to evidence\chaining_results.txt

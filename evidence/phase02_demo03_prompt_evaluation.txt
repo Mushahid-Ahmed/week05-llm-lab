@@ -1,0 +1,23 @@
+Model: qwen2.5:7b
+
+Claim 1 | baseline | valid=False | category=invalid-output     | missing recall=0% | 42.29s
+Claim 1 | enhanced | valid=True  | category=property           | missing recall=100% | 27.99s
+Claim 2 | baseline | valid=False | category=invalid-output     | missing recall=0% | 39.24s
+Claim 2 | enhanced | valid=True  | category=vehicle            | missing recall=50% | 22.43s
+Claim 3 | baseline | valid=False | category=invalid-output     | missing recall=0% | 39.25s
+Claim 3 | enhanced | valid=True  | category=property           | missing recall=50% | 30.72s
+Claim 4 | baseline | valid=False | category=invalid-output     | missing recall=0% | 38.16s
+Claim 4 | enhanced | valid=True  | category=health             | missing recall=50% | 18.85s
+Claim 5 | baseline | valid=False | category=invalid-output     | missing recall=0% | 49.29s
+Claim 5 | enhanced | valid=True  | category=property           | missing recall=50% | 26.51s
+
+SUMMARY
+======================================================================
+baseline | valid output rate: 0% | category accuracy: 0% | missing-info recall: 0% | mean latency: 41.65s
+enhanced | valid output rate: 100% | category accuracy: 80% | missing-info recall: 60% | mean latency: 25.30s
+
+Detailed rows saved to evidence\prompt_evaluation.jsonl
+
+Observation: quality changes must be weighed against latency.
+A five-claim sample is a signal, not proof; a larger unseen set
+is needed before treating the difference as meaningful.

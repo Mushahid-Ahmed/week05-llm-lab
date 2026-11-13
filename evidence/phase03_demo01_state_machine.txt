@@ -1,0 +1,13 @@
+Model: qwen2.5:7b
+
+Current state: START
+
+Current state: GENERATE
+Generated summary: A pipe burst in a house yesterday, damaging the kitchen ceiling. Photographs exist, but a repair estimate has not yet been obtained.
+
+Current state: VALIDATE
+
+Current state: FAILURE
+Validation failed (22 words). No retry is configured.
+
+Final state: DONE

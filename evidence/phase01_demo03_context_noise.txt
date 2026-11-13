@@ -1,0 +1,17 @@
+Model: qwen2.5:7b
+
+Concise | run 1 | vehicle | 12.04s | 340 chars
+Noisy   | run 1 | vehicle | 19.50s | 349 chars
+Concise | run 2 | vehicle | 12.32s | 340 chars
+Noisy   | run 2 | vehicle | 19.95s | 349 chars
+Concise | run 3 | vehicle | 57.25s | 199 chars
+Noisy   | run 3 | vehicle | 35.86s | 349 chars
+
+SUMMARY
+======================================================================
+Concise | categories: ['vehicle'] | mean latency: 27.20s | mean output chars: 293
+Noisy   | categories: ['vehicle'] | mean latency: 25.10s | mean output chars: 349
+
+Observation: the noisy prompt adds no evidence about the claim.
+Compare whether it changed the label, added latency, or invited
+unsupported explanation.

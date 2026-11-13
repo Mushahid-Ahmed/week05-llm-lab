@@ -1,0 +1,30 @@
+======================================================================
+Prompt 1:
+Complete this sentence with one word:
+The capital of France is
+
+Streamed continuation: Paris
+
+Chunks received: 2
+Latency: 44.94s
+
+======================================================================
+Prompt 2:
+Complete this sentence with one word:
+The capital of France is not
+
+Streamed continuation: The capital of France is not Paris.
+
+Chunks received: 9
+Latency: 2.29s
+
+======================================================================
+Prompt 3:
+Complete this sentence with one word:
+In a fictional world, the capital of France is
+
+Streamed continuation: New Paris
+
+Chunks received: 3
+Latency: 3.63s
+

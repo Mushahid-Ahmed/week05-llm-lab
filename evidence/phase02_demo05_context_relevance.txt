@@ -1,0 +1,47 @@
+Model: qwen2.5:7b
+
+Claim 1 | A_relevant          | run 1 | vehicle            | 43.25s
+Claim 1 | A_relevant          | run 2 | vehicle            | 23.82s
+Claim 1 | A_relevant          | run 3 | vehicle            | 38.13s
+Claim 1 | B_extra_irrelevant  | run 1 | vehicle            | 29.79s
+Claim 1 | B_extra_irrelevant  | run 2 | vehicle            | 38.43s
+Claim 1 | B_extra_irrelevant  | run 3 | vehicle            | 26.50s
+Claim 2 | A_relevant          | run 1 | property           | 3.64s
+Claim 2 | A_relevant          | run 2 | property           | 1.84s
+Claim 2 | A_relevant          | run 3 | property           | 1.84s
+Claim 2 | B_extra_irrelevant  | run 1 | property           | 4.77s
+Claim 2 | B_extra_irrelevant  | run 2 | property           | 1.7Claim 2 | B_extra_irrelevant  | run 3 | property           | 7.35s
+Claim 3 | A_relevant          | run 1 | travel             | 53.95s
+Claim 3 | A_relevant          | run 2 | travel             | 33.70s
+Claim 3 | A_relevant          | run 3 | travel             | 50.18s
+Claim 3 | B_extra_irrelevant  | run 1 | travel             | 11.11s
+Claim 3 | B_extra_irrelevant  | run 2 | travel             | 8.55s
+Claim 3 | B_extra_irrelevant  | run 3 | travel             | 0.50s
+Claim 4 | A_relevant          | run 1 | health             | 3.52s
+Claim 4 | A_relevant          | run 2 | health             | 12.39s
+Claim 4 | A_relevant          | run 3 | health             | 11.79s
+Claim 4 | B_extra_irrelevant  | run 1 | health             | 14.07s
+Claim 4 | B_extra_irrelevant  | run 2 | health             | 16.49s
+Claim 4 | B_extra_irrelevant  | run 3 | health             | 32.07s
+Claim 5 | A_relevant          | run 1 | context-dependent  | 32.39s
+Claim 5 | A_relevant          | run 2 | context-dependent  | 9.19s
+Claim 5 | A_relevant          | run 3 | context-dependent  | 21.46s
+Claim 5 | B_extra_irrelevant  | run 1 | context-dependent  | 11.48s
+Claim 5 | B_extra_irrelevant  | run 2 | context-dependent  | 11.97s
+Claim 5 | B_extra_irrelevant  | run 3 | context-dependent  | 7.98s
+
+SUMMARY
+================================================================================
+Claim 1 | A_relevant          | accuracy 100% | consistency 100% | mean latency 5.83s | mean chars 7
+Claim 1 | B_extra_irrelevant  | accuracy 100% | consistency 100% | mean latency 9.13s | mean chars 7
+Claim 2 | A_relevant          | accuracy 100% | consistency 100% | mean latency 6.83s | mean chars 8
+Claim 2 | B_extra_irrelevant  | accuracy 100% | consistency 100% | mean latency 10.30s | mean chars 8
+Claim 3 | A_relevant          | accuracy 100% | consistency 100% | mean latency 45.94s | mean chars 6
+Claim 3 | B_extra_irrelevant  | accuracy 100% | consistency 100% | mean latency 6.72s | mean chars 6
+Claim 4 | A_relevant          | accuracy 100% | consistency 100% | mean latency 9.23s | mean chars 6
+Claim 4 | B_extra_irrelevant  | accuracy 100% | consistency 100% | mean latency 20.88s | mean chars 6
+Claim 5 | A_relevant          | accuracy 100% | consistency 100% | mean latency 21.02s | mean chars 17
+Claim 5 | B_extra_irrelevant  | accuracy 100% | consistency 100% | mean latency 10.48s | mean chars 17
+
+Detailed results saved to evidence\context_results.csv
+Allowed labels: ['vehicle', 'property', 'travel', 'health', 'other', 'context-dependent']

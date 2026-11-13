@@ -1,0 +1,45 @@
+Model: qwen2.5:7b
+
+Attempt 1/3
+
+Draft:
+ A pipe burst damaged the kitchen ceiling. Photographs are available, but a repair estimate is missing. The incident occurred yesterday.
+
+Evaluation:
+ {
+  "passed": true,
+  "word_count": 40,
+  "unsupported_claims": [],
+  "missing_evidence_identified": true,
+  "feedback": "The draft accurately reflects the original claim without introducing unsupported facts. It also correctly identifies the missing repair estimate as evidence."
+}
+
+Attempt 2/3
+
+Draft:
+ A pipe burst and damaged the kitchen ceiling. Photographs are available, but a repair estimate is missing. The incident occurred yesterday.
+
+Evaluation:
+ {
+  "passed": true,
+  "word_count": 40,
+  "unsupported_claims": [],
+  "missing_evidence_identified": true,
+  "feedback": "The draft meets all the criteria: it has the correct word count, does not introduce unsupported facts, identifies the missing repair estimate, and does not make an approval or denial decision."
+}
+
+Attempt 3/3
+
+Draft:
+ A pipe burst and damaged the kitchen ceiling. Photographs are available, but a repair estimate is missing. The incident occurred yesterday.
+
+Evaluation:
+ {
+  "passed": true,
+  "word_count": 40,
+  "unsupported_claims": [],
+  "missing_evidence_identified": true,
+  "feedback": "The draft meets all the criteria: it has the correct word count, does not introduce unsupported facts, identifies the missing repair estimate, and does not make an approval or denial decision."
+}
+
+Stopped: attempt budget exhausted.

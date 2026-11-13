@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\DELL\Documents\Qoder\2026-10-17\d517df5e\Week05\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\DELL\Documents\Qoder\2026-10-17\d517df5e\Week05
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collecting ... collected 12 items
+
+tests/test_pipeline.py::test_valid_first_response_is_returned PASSED     [  8%]
+tests/test_pipeline.py::test_invalid_response_is_repaired_on_retry PASSED [ 16%]
+tests/test_pipeline.py::test_budget_exhaustion_raises_controlled_failure PASSED [ 25%]
+tests/test_pipeline.py::test_empty_claim_is_rejected_before_any_call PASSED [ 33%]
+tests/test_pipeline.py::test_result_reports_total_latency PASSED         [ 41%]
+tests/test_schemas.py::test_valid_output_is_accepted PASSED              [ 50%]
+tests/test_schemas.py::test_category_outside_allowed_list_is_rejected PASSED [ 58%]
+tests/test_schemas.py::test_missing_field_is_rejected PASSED             [ 66%]
+tests/test_schemas.py::test_blank_summary_is_rejected PASSED             [ 75%]
+tests/test_schemas.py::test_invalid_json_is_rejected PASSED              [ 83%]
+tests/test_schemas.py::test_missing_information_must_be_a_list_of_strings PASSED [ 91%]
+tests/test_schemas.py::test_schema_forbids_extra_fields PASSED           [100%]
+
+============================= 12 passed in 0.60s ==============================

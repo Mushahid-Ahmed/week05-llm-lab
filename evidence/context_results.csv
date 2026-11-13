@@ -1,0 +1,31 @@
+claim_id,claim,context,repeat,reference,label,latency_seconds,output_chars,raw_output
+1,My car collided with another vehicle at a junction.,A_relevant,1,vehicle,vehicle,5.14,7,vehicle
+1,My car collided with another vehicle at a junction.,A_relevant,2,vehicle,vehicle,6.177,7,vehicle
+1,My car collided with another vehicle at a junction.,A_relevant,3,vehicle,vehicle,6.188,7,vehicle
+1,My car collided with another vehicle at a junction.,B_extra_irrelevant,1,vehicle,vehicle,14.463,7,vehicle
+1,My car collided with another vehicle at a junction.,B_extra_irrelevant,2,vehicle,vehicle,6.483,7,vehicle
+1,My car collided with another vehicle at a junction.,B_extra_irrelevant,3,vehicle,vehicle,6.441,7,vehicle
+2,A pipe burst and damaged the walls of my house.,A_relevant,1,property,property,6.989,8,property
+2,A pipe burst and damaged the walls of my house.,A_relevant,2,property,property,6.706,8,property
+2,A pipe burst and damaged the walls of my house.,A_relevant,3,property,property,6.785,8,property
+2,A pipe burst and damaged the walls of my house.,B_extra_irrelevant,1,property,property,16.091,8,property
+2,A pipe burst and damaged the walls of my house.,B_extra_irrelevant,2,property,property,7.459,8,property
+2,A pipe burst and damaged the walls of my house.,B_extra_irrelevant,3,property,property,7.347,8,property
+3,My suitcase was lost during an international flight.,A_relevant,1,travel,travel,53.951,6,travel
+3,My suitcase was lost during an international flight.,A_relevant,2,travel,travel,33.697,6,travel
+3,My suitcase was lost during an international flight.,A_relevant,3,travel,travel,50.177,6,travel
+3,My suitcase was lost during an international flight.,B_extra_irrelevant,1,travel,travel,11.111,6,travel
+3,My suitcase was lost during an international flight.,B_extra_irrelevant,2,travel,travel,8.545,6,travel
+3,My suitcase was lost during an international flight.,B_extra_irrelevant,3,travel,travel,0.498,6,travel
+4,I received medical treatment after an accident.,A_relevant,1,health,health,3.521,6,health
+4,I received medical treatment after an accident.,A_relevant,2,health,health,12.39,6,health
+4,I received medical treatment after an accident.,A_relevant,3,health,health,11.788,6,health
+4,I received medical treatment after an accident.,B_extra_irrelevant,1,health,health,14.068,6,health
+4,I received medical treatment after an accident.,B_extra_irrelevant,2,health,health,16.485,6,health
+4,I received medical treatment after an accident.,B_extra_irrelevant,3,health,health,32.072,6,health
+5,"Something was damaged, but I have not explained what it was.",A_relevant,1,context-dependent,context-dependent,32.391,17,context-dependent
+5,"Something was damaged, but I have not explained what it was.",A_relevant,2,context-dependent,context-dependent,9.193,17,context-dependent
+5,"Something was damaged, but I have not explained what it was.",A_relevant,3,context-dependent,context-dependent,21.462,17,context-dependent
+5,"Something was damaged, but I have not explained what it was.",B_extra_irrelevant,1,context-dependent,context-dependent,11.477,17,context-dependent
+5,"Something was damaged, but I have not explained what it was.",B_extra_irrelevant,2,context-dependent,context-dependent,11.975,17,context-dependent
+5,"Something was damaged, but I have not explained what it was.",B_extra_irrelevant,3,context-dependent,context-dependent,7.981,17,context-dependent

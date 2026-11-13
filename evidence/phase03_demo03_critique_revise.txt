@@ -1,0 +1,48 @@
+Model: qwen2.5:7b
+
+--- DRAFT ---
+
+Claim Summary:
+- A pipe burst upstairs.
+- The burst damaged the kitchen ceiling.
+- The homeowner has photographs of the damage.
+- No repair estimate is available.
+- The incident occurred yesterday.
+
+Missing Information:
+- The extent of the damage to the kitchen ceiling.
+- The cause of the pipe burst.
+- Whether there is any water damage or other secondary damage.
+- The cost of repairs.
+(latency 17.61s)
+
+--- CRITIQUE ---
+
+Critique:
+- The draft accurately reflects the original claim and includes all the necessary information provided.
+- The summary is clear and concise.
+- The draft identifies the missing information appropriately.
+- No unsupported factual assertions are present.
+- No important omitted facts are identified as missing.
+- No unsupported claims of coverage, liability, approval, or denial are present.
+
+Suggested Minor Adjustment:
+- Consider adding a note about the need for further details on the extent of damage and cost estimates, which could help in formulating a more comprehensive response.
+(latency 28.07s)
+
+--- REVISED SUMMARY ---
+
+Claim Summary:
+- A pipe burst upstairs.
+- The burst damaged the kitchen ceiling.
+- The homeowner has photographs of the damage.
+- No repair estimate is available.
+- The incident occurred yesterday.
+- The extent of the damage to the kitchen ceiling is unknown.
+- The cause of the pipe burst is unknown.
+- There is no information on water damage or other secondary damage.
+- The cost of repairs is unknown.
+(latency 36.92s)
+
+Observation: the critique is itself model output. It can be
+wrong, so the revision must be checked against the claim.

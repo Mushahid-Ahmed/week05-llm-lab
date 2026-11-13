@@ -1,0 +1,16 @@
+Model: qwen2.5:7b
+
+The service was excellent.
+  -> positive (37.26s)
+The service was terrible.
+  -> negative (35.94s)
+The service was acceptable.
+  -> neutral (38.99s)
+The product works, but delivery was late.
+  -> neutral (30.36s)
+The package never arrived.
+  -> negative (38.84s)
+
+Observation: mixed sentiment (for example, a working product
+delivered late) exposes how category boundaries are defined.
+The model may also add explanation despite the instruction.

@@ -1,0 +1,35 @@
+Model: qwen2.5:7b
+
+Test input: My car was hit by another driver in a parking lot.
+  Zero-shot: vehicle            (3.19s)
+  Few-shot:  vehicle            (1.86s)
+  Reference: vehicle
+----------------------------------------------------------------------
+Test input: A pipe burst and flooded my kitchen.
+  Zero-shot: property           (1.73s)
+  Few-shot:  property           (4.74s)
+  Reference: property
+----------------------------------------------------------------------
+Test input: My suitcase was lost during a flight.
+  Zero-shot: travel             (1.75s)
+  Few-shot:  travel             (1.71s)
+  Reference: travel
+----------------------------------------------------------------------
+Test input: My laptop was damaged while I was using it at home.
+  Zero-shot: property           (4.41s)
+  Few-shot:  property           (1.78s)
+  Reference: context-dependent
+----------------------------------------------------------------------
+Test input: I needed medical treatment after a road accident.
+  Zero-shot: health             (1.52s)
+  Few-shot:  health             (4.43s)
+  Reference: context-dependent
+----------------------------------------------------------------------
+
+SUMMARY
+Zero-shot matches: 3/5
+Few-shot matches:  3/5
+
+Observation: examples can improve consistency, but they also
+bias the model toward the categories they demonstrate.
+Ambiguous inputs expose that bias.

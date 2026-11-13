@@ -145,17 +145,49 @@ The tests use a fake client, so they do not need Ollama.
 
 ## Evidence
 
-`evidence/` contains one text log per demonstration plus:
+`evidence/` contains the captured output of a full run on this machine.
 
-- `prompt_evaluation.jsonl` - per-claim baseline/enhanced results
-- `context_results.csv` - 30 runs for the context experiment
-- `chaining_results.txt` - single versus chained output
-- `demo08_events.jsonl` - observability event log
-- screenshots of the pytest run and key demo output
+| File                              | Contents                                       |
+| --------------------------------- | ---------------------------------------------- |
+| `phase01_demo01..05.txt`          | Foundations demos with real model responses    |
+| `phase02_demo00..06.txt`          | Prompt engineering demos                       |
+| `phase03_demo01..08.txt`          | Loop engineering demos                         |
+| `phase04_demo_app.txt`            | Integrated CLI on three claims                 |
+| `pytest.txt` / `pytest.png`       | Test run, 12 passed                            |
+| `rules_vs_llm.png`                | Rendered Phase 01 rules-versus-LLM log         |
+| `prompt_evaluation.png`           | Rendered baseline-versus-enhanced comparison   |
+| `validation_retry.png`            | Rendered retry exhaustion log                  |
+| `integrated_app.png`              | Rendered Phase 04 CLI output                   |
+| `prompt_evaluation.jsonl`         | Per-claim baseline/enhanced rows               |
+| `context_results.csv`             | 30 runs for the context experiment             |
+| `chaining_results.txt`            | Single versus chained output                   |
+| `demo08_events.jsonl`             | Observability event log                        |
 
 The model was run locally with `temperature=0` unless a demo explicitly
 changes it. Timings are machine-specific and are reported for comparison
 within a run, not as absolute performance claims.
+
+## Measured results from this run
+
+Hardware was CPU-only, so latencies are long: expect roughly 2-5 tokens per
+second and 5-50 s per call depending on output length.
+
+| Experiment                        | Observation                                                     |
+| --------------------------------- | --------------------------------------------------------------- |
+| Rules vs LLM (Phase 01)           | Rules returned `unknown` on all three paraphrases; the LLM labelled all three plausibly |
+| Concise vs noisy context          | Both prompts classified every claim correctly; the noisy prompt cost more tokens without adding accuracy |
+| Temperature 0 / 0.7 / 1.0         | All six runs obeyed the three-bullet requirement; higher temperature changed wording and emphasis, not structure or factual content |
+| Baseline vs enhanced prompt       | Baseline 0% valid output; enhanced 100% valid, 80% category accuracy, 60% missing-info recall, and lower mean latency (25.3 s vs 41.7 s) because the baseline rambled until it hit the token cap |
+| Zero-shot vs few-shot labels      | Both 3/5 against the reference labels; the two ambiguous claims (laptop at home, medical treatment after an accident) were labelled confidently by both |
+| Context relevance (30 runs)       | 100% label accuracy and consistency in both contexts; the extra paragraphs changed nothing except token count |
+| Validation-retry loop             | All three attempts produced 38-39 words against a 40-word minimum; the loop exited with a controlled failure rather than returning invalid text |
+| Evaluator-optimizer loop          | The model's self-reported `word_count: 40` was false (draft was ~21 words); the independent mechanical check correctly rejected the argument |
+| ReAct tool loop                   | Ended after 3 steps with `missing_information` still empty; the loop control, not the model, is the limit here |
+| Phase 04 CLI                      | All three claims accepted on the first attempt with schema-valid JSON |
+
+Several logs are failures on purpose. The retry loop, the self-evaluating
+model and the early-finishing ReAct loop show where loop engineering has to
+carry guarantees that prompting cannot provide.
 
 ## Note on evaluation
 

@@ -1,0 +1,54 @@
+======================================================================
+CLAIM: A pipe burst in my house, but I have no repair estimate.
+Attempt 1: accepted
+{
+  "claim": "A pipe burst in my house, but I have no repair estimate.",
+  "analysis": {
+    "category": "property",
+    "summary": "A pipe burst in the house, causing potential damage to the property.",
+    "missing_information": [
+      "repair estimate",
+      "extent of damage",
+      "specific location of the burst pipe"
+    ],
+    "needs_human_review": true,
+    "rationale": "The claim involves damage to household property, which falls under the property category. However, important details such as the extent of damage and a repair estimate are missing, necessitating human review."
+  }
+}
+Attempts: 1 | Model latency: 26.00s
+======================================================================
+CLAIM: My car was hit in a parking lot, and the other driver left.
+Attempt 1: accepted
+{
+  "claim": "My car was hit in a parking lot, and the other driver left.",
+  "analysis": {
+    "category": "vehicle",
+    "summary": "The claimant's car was damaged in a collision in a parking lot, and the other driver left the scene.",
+    "missing_information": [
+      "names and contact information of any witnesses",
+      "details about the damage to the car",
+      "the location of the incident"
+    ],
+    "needs_human_review": true,
+    "rationale": "The claim involves damage to a vehicle and a collision, which falls under the 'vehicle' category. However, additional details are needed for a thorough assessment."
+  }
+}
+Attempts: 1 | Model latency: 28.09s
+======================================================================
+CLAIM: My laptop was stolen from my office, but I have no police report.
+Attempt 1: accepted
+{
+  "claim": "My laptop was stolen from my office, but I have no police report.",
+  "analysis": {
+    "category": "property",
+    "summary": "A laptop was stolen from the claimant's office, but there is no police report.",
+    "missing_information": [
+      "police report",
+      "value of the stolen laptop",
+      "insurance policy details"
+    ],
+    "needs_human_review": true,
+    "rationale": "The claim involves damage to personal property (laptop) in a non-vehicle setting, making 'property' the most appropriate category. However, key details such as a police report, the value of the stolen item, and insurance policy specifics are missing, necessitating human review."
+  }
+}
+Attempts: 1 | Model latency: 22.81s

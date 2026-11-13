@@ -1,0 +1,36 @@
+Model: qwen2.5:7b
+
+SOURCE INFORMATION
+The customer has provided photographs.
+A repair estimate has not been supplied.
+
+DRAFT UNDER REVIEW
+The customer has submitted all required documents.
+The claim should be approved.
+
+MODEL AUDIT
+======================================================================
+Audit Results:
+
+1. **The customer has submitted all required documents.**
+   - **Classification:** Unsupported
+   - **Reason:** The source information states that photographs have been provided but does not mention any other required documents.
+
+2. **The claim should be approved.**
+   - **Classification:** Unsupported
+   - **Reason:** The source information does not provide any basis for making a final claim decision. No repair estimate has been supplied, which is likely a required document for such a decision.
+
+**Recommendations for Correction:**
+
+- The draft should be revised to accurately reflect the provided information. For example:
+  - "The customer has submitted the provided photographs."
+  - "A repair estimate has not been supplied."
+
+- If additional information is needed to make a claim decision, this should be clearly stated. For example:
+  - "The claim cannot be approved at this time due to the lack of a repair estimate."
+
+Latency: 61.46s
+
+Observation: the draft asserts that all documents were supplied
+and recommends approval. The source states that a repair estimate
+is missing. A fluent draft can still be wrong.

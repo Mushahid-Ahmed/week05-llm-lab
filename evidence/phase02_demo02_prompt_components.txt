@@ -1,0 +1,65 @@
+Model: qwen2.5:7b
+
+FIXED PARTS: role, objective, allowed categories, rules, output
+VARIABLE PART: the claim inside <claim> tags
+
+======================================================================
+TEST CLAIM 1: A pipe burst in my house, but I have no repair estimate.
+======================================================================
+Claim Category: Property Damage
+
+Brief Summary: The claimant reports that a pipe burst in their house, causing damage. However, there is no repair estimate provided.
+
+Missing Information:
+- The extent of the damage (e.g., which areas of the house were affected, what kind of damage occurred).
+- The cause of the pipe burst (e.g., whether it was due to a known issue, recent work, or an unexpected event).
+- Any existing insurance coverage or previous claims related to this incident.
+- A repair estimate or cost estimate for the damages.
+
+Priority: Medium
+
+Human-review recommendation: Yes
+
+Explanation: While the claim falls under the category of Property Damage, the lack of a repair estimate and detailed information about the extent of the damage and the cause of the incident necessitate a human review to ensure accurate assessment and processing of the claim.
+
+Latency: 38.90s
+
+======================================================================
+TEST CLAIM 2: My car was hit in a parking lot, and the other driver left.
+======================================================================
+Claim Category: Vehicle Damage
+
+Brief Summary: The claimant reports that their car was hit in a parking lot, and the other driver left the scene.
+
+Missing Information:
+1. Details of the damage to the car (e.g., extent of the damage, specific parts affected).
+2. Identification of the other driver (e.g., license plate number, description).
+3. Location of the parking lot (e.g., name of the parking lot, address).
+4. Any witnesses or surveillance footage available.
+5. Police report or incident number (if filed).
+
+Priority: Medium
+
+Human-review recommendation: Yes
+
+Explanation: While the claim falls under the Vehicle Damage category, there is insufficient information to fully assess the claim. A human reviewer is needed to gather more details and determine the extent of the damage and the next steps.
+
+Latency: 37.88s
+
+======================================================================
+TEST CLAIM 3: My laptop was stolen from my office, but I have no police report.
+======================================================================
+Claim Category: Theft
+
+Brief Summary: The claimant reports that their laptop was stolen from their office, but they do not have a police report.
+
+Missing Information: 
+- A police report number or confirmation that a report has been filed.
+
+Priority: Medium
+
+Human-review recommendation: Yes
+
+Explanation: The claim falls under the "Theft" category. However, the absence of a police report is a critical piece of information that may impact the claim's validity and processing. Therefore, a human review is recommended to ensure that the claim is properly evaluated.
+
+Latency: 25.89s

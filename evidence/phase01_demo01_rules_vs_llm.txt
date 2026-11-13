@@ -1,0 +1,22 @@
+Model: qwen2.5:7b
+
+INPUT: A delivery van struck my parked car.
+RULE: unknown
+LLM:  Auto Damage Claim
+Latency: 12.58s
+----------------------------------------------------------------------
+INPUT: Water from a broken pipe damaged my kitchen.
+RULE: unknown
+LLM:  Pipe Burst Damage
+Latency: 17.19s
+----------------------------------------------------------------------
+INPUT: My car was damaged after another driver hit it.
+RULE: unknown
+LLM:  Collision Damage Claim
+Latency: 15.65s
+----------------------------------------------------------------------
+
+Observation: the rules return 'unknown' whenever the wording
+does not contain a listed keyword, while the LLM interprets all
+three descriptions. The rule output is reproducible and testable;
+the LLM output is plausible but must still be checked.

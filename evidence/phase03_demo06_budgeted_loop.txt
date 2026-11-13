@@ -1,0 +1,22 @@
+Model: qwen2.5:7b
+Budgets: 3 calls, 180s
+
+Call 1/3
+Pipe burst damaged kitchen ceiling; photographs available, repair estimate missing.
+Latency: 3.40s
+Word count: 10
+Call 2/3
+A pipe burst causing kitchen ceiling damage; photographs provided, but no repair estimate attached.
+Latency: 5.19s
+Word count: 14
+Call 3/3
+A pipe burst causing kitchen ceiling damage; photographs present, repair estimate pending.
+Latency: 4.41s
+Word count: 12
+Stopping: call budget exhausted.
+
+--- EXECUTION REPORT ---
+Calls made: 3
+Elapsed time: 12.98 seconds
+Last output: A pipe burst causing kitchen ceiling damage; photographs present, repair estimate pending.
+Final status: output failed length validation.

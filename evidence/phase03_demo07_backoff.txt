@@ -1,0 +1,9 @@
+Service request, attempt 1
+Error: Simulated temporary service failure.
+Retrying after 0.51 seconds...
+Service request, attempt 2
+Error: Simulated temporary service failure.
+Retrying after 1.15 seconds...
+Service request, attempt 3
+
+Result: Service response received successfully.
